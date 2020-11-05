@@ -14,7 +14,8 @@ var app = express();
 
 //Database connection - try to connect an log a pass/fail result!
 const mongoose = require('mongoose')
-mongoose.connect('mongodb+srv://sharsha2:Harsha@9699@brosmanager.ud2ws.mongodb.net/bros',
+const globals = require('./config/globals')
+mongoose.connect(globals.db,
     {
         useNewUrlParser: true,
         useUnifiedTopology: true
